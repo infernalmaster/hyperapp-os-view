@@ -1,4 +1,4 @@
-import { getExtension, getActiveFrame } from "./libs";
+import { getExtension, getActiveFrame, fillFolderWithImages } from "./libs";
 import { extToType } from "./cfg";
 
 export const state = {
@@ -10,7 +10,7 @@ export const state = {
     "note.txt": `
       Some random notes about this fun program written with HyperApp
     `,
-    cats: {
+    photos: {
       "1.jpg": "http://placekitten.com/500/500",
       "2.jpg": "http://placekitten.com/500/200",
       small: {
@@ -29,8 +29,8 @@ export const state = {
     },
     2: {
       id: 2,
-      link: "/cats",
-      name: "cats",
+      link: "/photos",
+      name: "photos",
       position: { x: 900, y: 170 }
     },
     3: {
@@ -49,6 +49,8 @@ export const state = {
 
   frames: {}
 };
+
+fillFolderWithImages(state.fs.photos, 0, 100);
 
 const withOne = (id, fn) => state => {
   if (!state[id]) return {};
@@ -107,8 +109,8 @@ export const actions = {
       id,
       icon: "https://img.icons8.com/color/96/000000/chrome.png",
       position: {
-        x: activeFrame.position.x + 10,
-        y: activeFrame.position.y + 10
+        x: activeFrame.position.x + 20,
+        y: activeFrame.position.y + 20
       },
       size: {
         x: 400,

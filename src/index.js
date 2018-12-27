@@ -18,7 +18,6 @@ import { getActiveFrame } from "./libs";
 // app icons
 // group app by type for dockBar and always show apps in doc bar
 // allow frames with empty app.payload
-// some random data for fs
 // menu for top bar
 // transitions https://github.com/zaceno/hyperapp-transitions
 // deploy

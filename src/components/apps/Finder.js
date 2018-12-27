@@ -12,7 +12,7 @@ const Icon = ({ item, payload, frame }) => (state, actions) => {
     <div
       style={{
         padding: "5px",
-        maxWidth: "120px",
+        width: "60px",
         textAlign: "center",
         wordBreak: "break-word"
       }}
@@ -52,12 +52,14 @@ const Finder = ({ frame }) => (state, actions) => {
     <div
       style={{
         width: "100%",
-        height: "100%"
+        height: "100%",
+        overflow: "scroll"
       }}
     >
       <div
         style={{
-          display: "flex"
+          display: "flex",
+          flexWrap: "wrap"
         }}
       >
         {Object.keys(activeFolder).map(item => (
