@@ -18,7 +18,9 @@ import { getActiveFrame } from "./libs";
 // group app by type for dockBar and always show apps in doc bar
 // allow frames with empty app.payload
 // menu for top bar
-// transitions https://github.com/zaceno/hyperapp-transitions
+// right mouse button menu
+// change bg
+// fix transitions
 // deploy
 
 const App = (state, actions) => (

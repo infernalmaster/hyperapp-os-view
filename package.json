@@ -9,6 +9,7 @@
     "lint": "prettier-eslint --write '**/*.js'"
   },
   "dependencies": {
+    "@hyperapp/transitions": "^1.0.2",
     "hyperapp": "^1.2.9",
     "picostyle": "^2.0.1"
   },

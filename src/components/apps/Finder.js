@@ -21,6 +21,7 @@ const Icon = ({ item, payload, frame }) => (state, actions) => {
         src={image}
         height="40"
         alt="icon"
+        style={{ cursor: "pointer" }}
         ondblclick={() => {
           if (ext === "folder") {
             actions.frames.goToDir({
