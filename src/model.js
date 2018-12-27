@@ -107,7 +107,6 @@ export const actions = {
 
     const newFrame = {
       id,
-      icon: "https://img.icons8.com/color/96/000000/chrome.png",
       position: {
         x: activeFrame.position.x + 20,
         y: activeFrame.position.y + 20

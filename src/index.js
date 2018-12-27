@@ -15,7 +15,6 @@ import { getActiveFrame } from "./libs";
 // https://icons8.com/icon/set/game/color
 
 // TODO:
-// app icons
 // group app by type for dockBar and always show apps in doc bar
 // allow frames with empty app.payload
 // menu for top bar
@@ -45,13 +44,13 @@ const App = (state, actions) => (
       ))}
 
     <DockBar>
-      {Object.values(state.frames).map(app => (
+      {Object.values(state.frames).map(frame => (
         <DockBarIcon
-          key={app.id}
-          app={app}
+          key={frame.id}
+          frame={frame}
           handleClick={() => {
-            actions.frames.up({ id: app.id });
-            actions.frames.show({ id: app.id });
+            actions.frames.up({ id: frame.id });
+            actions.frames.show({ id: frame.id });
           }}
         />
       ))}

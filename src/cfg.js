@@ -12,3 +12,10 @@ export const extToType = {
   folder: "Finder",
   html: "Browser"
 };
+
+export const iconByType = {
+  Finder: "https://img.icons8.com/color/96/000000/computer.png",
+  Word: "https://img.icons8.com/color/96/000000/pen.png",
+  Paint: "https://img.icons8.com/color/96/000000/stack-of-photos.png",
+  Browser: "https://img.icons8.com/color/96/000000/firefox.png"
+};
