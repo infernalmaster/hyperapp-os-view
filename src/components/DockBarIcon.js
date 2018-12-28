@@ -10,14 +10,15 @@ const DockBarIcon = (props, children) => {
   );
 };
 
-export default pc(DockBarIcon)(({ frame }) => ({
+export default pc(DockBarIcon)(({ type }) => ({
   display: "inline-block",
   height: "40px",
   width: "40px",
   margin: "10px",
   transition: "all 0.2s",
-  backgroundImage: `url(${iconByType[frame.app.type]})`,
+  backgroundImage: `url(${iconByType[type]})`,
   backgroundSize: "contain",
+  cursor: "pointer",
   ":hover": {
     transform: "scale(1.3)"
   }

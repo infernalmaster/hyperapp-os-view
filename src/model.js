@@ -1,5 +1,5 @@
 import { getExtension, getActiveFrame, fillFolderWithImages } from "./libs";
-import { extToType } from "./cfg";
+import { extToType, newFileByType } from "./cfg";
 
 export const state = {
   time: new Date(),
@@ -138,6 +138,36 @@ export const actions = {
     };
 
     return { frames: { ...state.frames, [id]: newFrame } };
+  },
+
+  openAppByType: ({ type }) => ({ frames }, actions) => {
+    const framesCertainType = Object.values(frames).filter(
+      f => f.app.type === type
+    );
+
+    if (framesCertainType.length === 0) {
+      actions.openFrame(newFileByType[type]);
+    } else if (framesCertainType.length === 1) {
+      const id = framesCertainType[0].id;
+
+      actions.frames.up({ id });
+      actions.frames.show({ id });
+    } else {
+      const frameWithMaxZIndex = framesCertainType.sort(
+        (f1, f2) => f2.zIndex - f1.zIndex
+      )[0];
+
+      framesCertainType.sort((f1, f2) => f2.id - f1.id);
+
+      const id =
+        framesCertainType[
+          (framesCertainType.indexOf(frameWithMaxZIndex) + 1) %
+            framesCertainType.length
+        ].id;
+
+      actions.frames.up({ id });
+      actions.frames.show({ id });
+    }
   },
 
   frames: {

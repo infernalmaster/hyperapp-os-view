@@ -11,9 +11,9 @@ import { state, actions } from "./model";
 
 import { getActiveFrame } from "./libs";
 
+import { extToType } from "./cfg";
+
 // TODO:
-// group app by type for dockBar and always show apps in doc bar
-// allow frames with empty app.payload
 // menu for top bar
 // right mouse button menu
 // fix transitions
@@ -25,7 +25,7 @@ const App = (state, actions) => (
       <div>
         <span>JSOS </span>
       </div>
-      <div>{(getActiveFrame(state) || { name: "-" }).name}</div>
+      <div>{(getActiveFrame(state) || { app: { type: "-" } }).app.type}</div>
       <div>
         <Clock />
       </div>
@@ -42,13 +42,12 @@ const App = (state, actions) => (
       ))}
 
     <DockBar>
-      {Object.values(state.frames).map(frame => (
+      {Object.values(extToType).map(type => (
         <DockBarIcon
-          key={frame.id}
-          frame={frame}
+          key={type}
+          type={type}
           handleClick={() => {
-            actions.frames.up({ id: frame.id });
-            actions.frames.show({ id: frame.id });
+            actions.openAppByType({ type });
           }}
         />
       ))}

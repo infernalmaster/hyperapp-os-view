@@ -8,10 +8,10 @@ export const extMap = {
 };
 
 export const extToType = {
-  txt: "Word",
-  jpg: "Paint",
   folder: "Finder",
   html: "Browser",
+  jpg: "Paint",
+  txt: "Word",
   mp3: "MusicPlayer"
 };
 
@@ -21,4 +21,22 @@ export const iconByType = {
   Paint: "https://img.icons8.com/color/96/000000/stack-of-photos.png",
   Browser: "https://img.icons8.com/color/96/000000/firefox.png",
   MusicPlayer: "https://img.icons8.com/color/48/000000/musical-notes.png"
+};
+
+export const newFileByType = {
+  Finder: { fileName: "/" },
+  Word: { fileName: "new.txt", payload: "" },
+  Paint: {
+    fileName: "new.jpg",
+    payload: "http://placekitten.com/500/500"
+  },
+  Browser: { fileName: "new.html", payload: "https://www.wikipedia.org" },
+  MusicPlayer: {
+    fileName: "new.mp3",
+    payload: {
+      url: "https://521dimensions.com/songs/LORN - ANVIL.mp3",
+      cover_art_url:
+        "https://521dimensions.com/img/open-source/amplitudejs/album-art/anvil.jpg"
+    }
+  }
 };
