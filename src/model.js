@@ -10,6 +10,13 @@ export const state = {
     "note.txt": `
       Some random notes about this fun program written with HyperApp
     `,
+
+    "Lorn-Anvil.mp3": {
+      url: "https://521dimensions.com/songs/LORN - ANVIL.mp3",
+      cover_art_url:
+        "https://521dimensions.com/img/open-source/amplitudejs/album-art/anvil.jpg"
+    },
+
     photos: {
       "1.jpg": "http://placekitten.com/500/500",
       "2.jpg": "http://placekitten.com/500/200",
@@ -44,6 +51,12 @@ export const state = {
       link: "/note.txt",
       name: "note.txt",
       position: { x: 900, y: 240 }
+    },
+    5: {
+      id: 4,
+      link: "/Lorn-Anvil.mp3",
+      name: "lorn-anvil.mp3",
+      position: { x: 970, y: 240 }
     }
   },
 

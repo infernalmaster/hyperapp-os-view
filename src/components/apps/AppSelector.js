@@ -4,11 +4,13 @@ import Browser from "./Browser";
 import Word from "./Word";
 import Paint from "./Paint";
 import Finder from "./Finder";
+import MusicPlayer from "./MusicPlayer";
 
 const typeToComponentMapping = {
   Word,
   Paint,
   Finder,
+  MusicPlayer,
   Browser
 };
 

@@ -11,15 +11,11 @@ import { state, actions } from "./model";
 
 import { getActiveFrame } from "./libs";
 
-// icons
-// https://icons8.com/icon/set/game/color
-
 // TODO:
 // group app by type for dockBar and always show apps in doc bar
 // allow frames with empty app.payload
 // menu for top bar
 // right mouse button menu
-// change bg
 // fix transitions
 // deploy
 
