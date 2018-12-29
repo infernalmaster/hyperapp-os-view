@@ -7,7 +7,8 @@
     "deploy": "gh-pages-deploy -- 'deploy'",
     "start": "parcel src/index.html",
     "build": "parcel build src/index.html --public-url /hyperapp-os-view",
-    "lint": "prettier-eslint --write '**/*.js'"
+    "lint": "prettier-eslint --write '**/*.js'",
+    "clean-dist": "rm -rf ./dist"
   },
   "gh-pages-deploy": {
     "staticpath": "dist",
@@ -15,7 +16,10 @@
       "build"
     ],
     "commit": "a custom commit message",
-    "noprompt": false
+    "post": [
+      "clean-dist"
+    ],
+    "noprompt": true
   },
   "dependencies": {
     "hyperapp": "^1.2.9",
