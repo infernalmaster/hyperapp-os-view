@@ -16,7 +16,6 @@ import { extToType } from "./cfg";
 // TODO:
 // menu for top bar
 // right mouse button menu
-// fix transitions
 // deploy
 
 const App = (state, actions) => (
@@ -38,7 +37,7 @@ const App = (state, actions) => (
     {Object.values(state.frames)
       .filter(app => app.shown)
       .map(app => (
-        <AppWindow key={app.id} app={app} />
+        <AppWindow key={app.id} frame={app} />
       ))}
 
     <DockBar>
