@@ -22,8 +22,7 @@
     "noprompt": true
   },
   "dependencies": {
-    "hyperapp": "^1.2.9",
-    "picostyle": "^2.0.1"
+    "hyperapp": "^1.2.9"
   },
   "devDependencies": {
     "babel-eslint": "9.x",

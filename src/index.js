@@ -15,8 +15,7 @@ import { extToType } from "./cfg";
 
 // TODO:
 // menu for top bar
-// right mouse button menu
-// deploy
+// right mouse button menu (delete file and icon)
 
 const App = (state, actions) => (
   <Screen>
