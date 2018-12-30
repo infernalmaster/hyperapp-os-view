@@ -6,8 +6,7 @@ export default (prosp, children) => (
       position: "fixed",
       width: "100%",
       height: "100%",
-      backgroundImage:
-        "url(https://wallpapersite.com/images/pages/pic_h/5165.jpg)",
+      backgroundColor: "#158aa5",
       backgroundSize: "cover"
     }}
   >
