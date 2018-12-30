@@ -25,16 +25,11 @@ const SystemTopBar = (props, children) => {
 export default SystemTopBar;
 
 export const Clock = () => (state, actions) => (
-  <div
-    oncreate={() => setInterval(() => actions.updateTime(new Date()), 10000)}
-  >
+  <div oncreate={() => setInterval(() => actions.updateTime(new Date()), 1000)}>
     {state.time
       .toString()
       .split(" ")
       .slice(0, 5)
-      .join(" ")
-      .split(":")
-      .slice(0, 2)
-      .join(":")}
+      .join(" ")}
   </div>
 );
