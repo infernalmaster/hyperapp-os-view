@@ -6,8 +6,7 @@ export default (prosp, children) => (
       position: "fixed",
       width: "100%",
       height: "100%",
-      backgroundColor: "#158aa5",
-      backgroundSize: "cover"
+      background: "#158aa5"
     }}
   >
     {children}

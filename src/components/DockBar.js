@@ -5,15 +5,24 @@ export default (prosp, children) => (
     style={{
       position: "absolute",
       bottom: "0",
-      left: "50%",
-      transform: "translateX(-50%)",
-      display: "inline-block",
-      height: "60px",
-      background: "black",
-      borderRadius: "10px 10px 0 0",
-      zIndex: "99999"
+      left: "0",
+      width: "100%",
+      zIndex: "99999",
+
+      display: "flex",
+      justifyContent: "center"
     }}
   >
-    {children}
+    <div
+      style={{
+        display: "inline-block",
+        // height: "60px",
+        background: "black",
+        borderRadius: "10px 10px 0 0",
+        zIndex: "99999"
+      }}
+    >
+      {children}
+    </div>
   </div>
 );
