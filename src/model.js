@@ -53,7 +53,7 @@ export const state = {
       position: { x: 900, y: 240 }
     },
     5: {
-      id: 4,
+      id: 5,
       link: "/Lorn-Anvil.mp3",
       name: "lorn-anvil.mp3",
       position: { x: 970, y: 240 }
